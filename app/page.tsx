@@ -637,6 +637,13 @@ export default function Home() {
     setDisclosureInitialData(undefined);
   };
 
+  const handleNewChat = () => {
+    setMessages([]);
+    handleBackFromWorkflow();
+    setUploadedFileNames([]);
+    toast.success("对话已重置");
+  };
+
   // 如果正在进行专利检索式工作流，显示专用页面
   if (showSearchFormula) {
     return (
